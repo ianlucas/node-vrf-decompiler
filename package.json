@@ -1,0 +1,27 @@
+{
+    "name": "@ianlucas/node-vrf-decompiler",
+    "version": "0.0.0",
+    "description": "A Valve Resource Format's Decompiler wrapper for TypeScript",
+    "license": "MIT",
+    "author": "Ian Lucas",
+    "repository": "ianlucas/node-vrf-decompiler",
+    "type": "module",
+    "main": "dist/src/index.js",
+    "scripts": {
+        "postinstall": "node dist/scripts/postinstall.js",
+        "format": "prettier . --write",
+        "prepack": "([ -d dist ] && rm -rf dist); tsc",
+        "upgrade": "npx npm-check-updates@latest --target minor -u"
+    },
+    "devDependencies": {
+        "@types/follow-redirects": "^1.14.4",
+        "@types/node": "^18.19.34",
+        "@types/unzipper": "^0.10.10",
+        "prettier": "3.3.1",
+        "typescript": "^5.5.4"
+    },
+    "dependencies": {
+        "follow-redirects": "^1.15.6",
+        "unzipper": "^0.12.3"
+    }
+}
