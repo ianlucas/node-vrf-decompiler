@@ -1,5 +1,5 @@
 {
-    "name": "@ianlucas/node-vrf-decompiler",
+    "name": "@ianlucas/vrf-decompiler",
     "version": "0.0.0",
     "description": "A Valve Resource Format's Decompiler wrapper for TypeScript",
     "license": "MIT",
