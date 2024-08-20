@@ -2,9 +2,9 @@
 .gitignore
 .prettierignore
 .prettierrc
-/DepotDownloader
+/Decompiler
 /depots
-/dist/DepotDownloader
+/dist/Decompiler
 /dist/depots
 /scripts
 /src
