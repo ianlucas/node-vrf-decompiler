@@ -1,6 +1,6 @@
 {
     "name": "@ianlucas/vrf-decompiler",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "A Valve Resource Format's Decompiler wrapper for TypeScript",
     "license": "MIT",
     "author": "Ian Lucas",
