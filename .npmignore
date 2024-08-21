@@ -3,9 +3,7 @@
 .prettierignore
 .prettierrc
 /Decompiler
-/depots
 /dist/Decompiler
-/dist/depots
 /scripts
 /src
 tsconfig.json

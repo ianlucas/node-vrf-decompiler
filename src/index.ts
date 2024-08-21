@@ -11,8 +11,8 @@ import { toOriginalCase } from "./utils/to-original-case.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootPath = join(__dirname, "..");
-const extractPath = join(rootPath, "DepotDownloader");
-const executablePath = join(extractPath, "DepotDownloader");
+const extractPath = join(rootPath, "Decompiler");
+const executablePath = join(extractPath, "Decompiler");
 
 export function vrfDecompiler({ debug, ...args }: DecompilerArgs): Promise<string> {
     return new Promise((resolve, reject) => {
