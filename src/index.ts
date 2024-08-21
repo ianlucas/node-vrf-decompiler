@@ -19,7 +19,7 @@ export function vrfDecompiler({ debug, ...args }: DecompilerArgs): Promise<strin
         const formattedArgs = Object.entries(args)
             .map(([key, value]) => {
                 key = toOriginalCase(key as DecompilerArgsKey);
-                return typeof value === "boolean" ? `-${key}` : `-${key} ${value}`;
+                return typeof value === "boolean" ? key : `${key} ${value}`;
             })
             .join(" ");
         const command = `${executablePath} ${formattedArgs}`;
