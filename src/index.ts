@@ -26,7 +26,7 @@ export function vrfDecompiler({ debug, ...args }: DecompilerArgs): Promise<strin
         if (debug) {
             console.log(command);
         }
-        exec(command, (error, stdout) => {
+        exec(command, { maxBuffer: 1024 * 1024 * 50 }, (error, stdout) => {
             if (error) return reject(error);
             resolve(stdout);
         });
