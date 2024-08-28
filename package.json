@@ -15,9 +15,9 @@
     },
     "devDependencies": {
         "@types/follow-redirects": "^1.14.4",
-        "@types/node": "^18.19.34",
+        "@types/node": "^18.19.46",
         "@types/unzipper": "^0.10.10",
-        "prettier": "3.3.1",
+        "prettier": "3.3.3",
         "typedoc": "^0.26.6",
         "typescript": "^5.5.4"
     },
