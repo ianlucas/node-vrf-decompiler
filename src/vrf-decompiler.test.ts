@@ -61,7 +61,7 @@ test("npm run postinstall", () => {
     expect(existsSync(vrfDecompilerBinPath)).toBe(true);
 });
 
-test("depot-downloader", async () => {
+test("vrf-decompiler", async () => {
     expect(
         await read(
             vrfDecompiler({
