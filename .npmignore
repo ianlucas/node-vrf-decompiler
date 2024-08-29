@@ -3,8 +3,6 @@
 .gitignore
 .prettierignore
 .prettierrc
-/Decompiler
-/dist/Decompiler
 /scripts
 /src
 tsconfig.json

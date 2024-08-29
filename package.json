@@ -8,9 +8,10 @@
     "main": "dist/src/index.js",
     "scripts": {
         "docs": "typedoc --out docs src/index.ts",
-        "postinstall": "node dist/scripts/postinstall.js",
         "format": "prettier . --write",
+        "postinstall": "node dist/scripts/postinstall.js",
         "prepack": "([ -d dist ] && rm -rf dist); tsc",
+        "test": "vitest --run --testTimeout 120000",
         "upgrade": "npx npm-check-updates@latest --target minor -u"
     },
     "devDependencies": {
@@ -19,7 +20,8 @@
         "@types/unzipper": "^0.10.10",
         "prettier": "3.3.3",
         "typedoc": "^0.26.6",
-        "typescript": "^5.5.4"
+        "typescript": "^5.5.4",
+        "vitest": "^2.0.5"
     },
     "dependencies": {
         "follow-redirects": "^1.15.6",
