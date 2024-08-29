@@ -10,14 +10,15 @@ import { downloadFile } from "../src/utils/download-file.js";
 import { getPlatform } from "../src/utils/get-platform.js";
 import { unzipFile } from "../src/utils/unzip-file.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const BASE_URL = "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/10.1/";
 const platform = getPlatform();
 const zipName = `Decompiler-${platform}.zip`;
 const downloadPath = join(__dirname, "..", zipName);
 const extractPath = join(__dirname, "..", "Decompiler");
 
-(async () => {
+export async function postInstall() {
     await downloadFile(`${BASE_URL}${zipName}`, downloadPath);
     await unzipFile(downloadPath, extractPath);
     unlinkSync(downloadPath);
@@ -25,4 +26,8 @@ const extractPath = join(__dirname, "..", "Decompiler");
         const executablePath = join(extractPath, "Decompiler");
         chmodSync(executablePath, "755");
     }
-})();
+}
+
+if (process.argv[1] === __filename) {
+    postInstall();
+}
