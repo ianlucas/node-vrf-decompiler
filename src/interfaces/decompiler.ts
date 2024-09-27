@@ -76,6 +76,12 @@ export interface DecompilerArgs {
     vpkDecompile?: boolean;
 
     /**
+     * Decompile supported resource files. Alias of `vpkDecompile`.
+     * @remarks Can be specified using `--decompile`.
+     */
+    decompile?: boolean;
+
+    /**
      * Lists all resources in given VPK. File extension and path filters apply.
      * @remarks Can be specified using `--vpk_list` or `-l`.
      */
@@ -86,6 +92,16 @@ export interface DecompilerArgs {
      * @remarks Can be specified using `--vpk_dir`.
      */
     vpkDir?: boolean;
+
+    /**
+     * @remarks Can be specified using `--gltf_export_animations`.
+     */
+    gltfExportAnimations?: boolean;
+
+    /**
+     * @remarks Can be specified using `--gltf_animation_list`.
+     */
+    gltfAnimationList?: string;
 
     /**
      * Exports meshes/models in given glTF format. Must be either 'gltf' (default) or 'glb'.
@@ -116,6 +132,11 @@ export interface DecompilerArgs {
      * @remarks Can be specified using `--tools_asset_info_short`.
      */
     toolsAssetInfoShort?: boolean;
+
+    /**
+     * @remarks Can be specified using `--texture_decode_flags`.
+     */
+    textureDecodeFlags?: string;
 }
 
 export type DecompilerArgsKey = keyof Omit<DecompilerArgs, "debug">;

@@ -12,7 +12,7 @@ import { unzipFile } from "../src/utils/unzip-file.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const BASE_URL = "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/10.1/";
+const BASE_URL = "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/10.2/";
 const platform = getPlatform();
 const zipName = `Decompiler-${platform}.zip`;
 const downloadPath = join(__dirname, "..", zipName);
