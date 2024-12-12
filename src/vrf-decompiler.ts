@@ -9,10 +9,12 @@ import { fileURLToPath } from "url";
 import type { DecompilerArgs, DecompilerArgsKey } from "./interfaces/decompiler.js";
 import { toOriginalCase } from "./utils/to-original-case.js";
 
+export const EXECUTABLE_NAME = "Source2Viewer-CLI";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootPath = join(__dirname, "..");
-const extractPath = join(rootPath, "Decompiler");
-const executablePath = join(extractPath, "Decompiler");
+const extractPath = join(rootPath, EXECUTABLE_NAME);
+const executablePath = join(extractPath, EXECUTABLE_NAME);
 
 export function vrfDecompiler({ debug, ...args }: DecompilerArgs): ChildProcessWithoutNullStreams {
     const formattedArgs = Object.entries(args).flatMap(([key, value]) => {

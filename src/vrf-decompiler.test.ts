@@ -9,7 +9,7 @@ import { rm } from "fs/promises";
 import { resolve } from "path";
 import { afterAll, beforeAll, expect, test } from "vitest";
 import { postInstall } from "../scripts/postinstall.js";
-import { vrfDecompiler } from "./vrf-decompiler.js";
+import { EXECUTABLE_NAME, vrfDecompiler } from "./vrf-decompiler.js";
 
 const url = "https://github.com";
 const repo = "ValveResourceFormat/ValveResourceFormat";
@@ -20,8 +20,8 @@ const sampleVtexCUrl = `${url}/${repo}/raw/${commit}/Tests/Files/${file}`;
 const cwd = process.cwd();
 const sampleVtexCPath = resolve(cwd, "sample_png.vtex_c");
 const decompiledSamplePngPath = resolve(cwd, "sample_png.png");
-const vrfDecompilerPath = resolve(cwd, "Decompiler");
-const vrfDecompilerBinPath = resolve(vrfDecompilerPath, "Decompiler");
+const vrfDecompilerPath = resolve(cwd, EXECUTABLE_NAME);
+const vrfDecompilerBinPath = resolve(vrfDecompilerPath, EXECUTABLE_NAME);
 
 function read(ps: ChildProcessWithoutNullStreams) {
     return new Promise((resolve, reject) => {
