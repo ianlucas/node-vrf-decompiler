@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DecompilerArgsKey } from "../interfaces/decompiler";
+import type { DecompilerArgsKey } from "../interfaces/decompiler.js";
 
 const map: Record<DecompilerArgsKey, string> = {
     input: "--input",
@@ -31,5 +31,9 @@ const map: Record<DecompilerArgsKey, string> = {
 };
 
 export function toOriginalCase(option: DecompilerArgsKey): string {
-    return map[option];
+    const originalCase = map[option];
+    if (originalCase === undefined) {
+        throw new Error(`Unknown argument ${option}`);
+    }
+    return originalCase;
 }

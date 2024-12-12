@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ChildProcessWithoutNullStreams, spawn } from "child_process";
+import { type ChildProcessWithoutNullStreams, spawn } from "child_process";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import { DecompilerArgs, DecompilerArgsKey } from "./interfaces/decompiler.js";
+import type { DecompilerArgs, DecompilerArgsKey } from "./interfaces/decompiler.js";
 import { toOriginalCase } from "./utils/to-original-case.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
