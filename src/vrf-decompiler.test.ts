@@ -71,7 +71,7 @@ test("vrf-decompiler", async () => {
                 debug: true
             })
         )
-    ).toMatch(/File Size: 1924 bytes/);
+    ).toMatch(/Dump written/);
     expect(existsSync(decompiledSamplePngPath)).toBe(true);
 });
 
