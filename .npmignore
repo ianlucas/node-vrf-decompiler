@@ -5,4 +5,5 @@
 .prettierrc
 /scripts
 /src
+/tests
 tsconfig.json

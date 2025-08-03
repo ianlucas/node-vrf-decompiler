@@ -4,22 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { ChildProcessWithoutNullStreams } from "child_process";
-import { createWriteStream, existsSync } from "fs";
+import { existsSync } from "fs";
 import { rm } from "fs/promises";
 import { resolve } from "path";
 import { afterAll, beforeAll, expect, test } from "vitest";
 import { postInstall } from "../scripts/postinstall.js";
 import { EXECUTABLE_NAME, vrfDecompiler } from "./vrf-decompiler.js";
 
-const url = "https://github.com";
-const repo = "ValveResourceFormat/ValveResourceFormat";
-const commit = "9acf01d01522e7c6e93d31da273ca6782ac1f0c2";
-const file = "subscriptions_gamerpvp_inhouse_png.vtex_c";
-const sampleVtexCUrl = `${url}/${repo}/raw/${commit}/Tests/Files/${file}`;
-
 const cwd = process.cwd();
-const sampleVtexCPath = resolve(cwd, "sample_png.vtex_c");
-const decompiledSamplePngPath = resolve(cwd, "sample_png.png");
+const sampleVtexCPath = resolve(cwd, "tests/sample_png.vtex_c");
+const decompiledSamplePngPath = resolve(cwd, "tests/sample_png.png");
 const vrfDecompilerPath = resolve(cwd, EXECUTABLE_NAME);
 const vrfDecompilerBinPath = resolve(vrfDecompilerPath, EXECUTABLE_NAME);
 
@@ -40,21 +34,6 @@ function read(ps: ChildProcessWithoutNullStreams) {
 
 beforeAll(async () => {
     await postInstall();
-    await fetch(sampleVtexCUrl).then((response) => {
-        const writeStream = createWriteStream(sampleVtexCPath);
-        const writableStream = new WritableStream<Uint8Array>({
-            write(chunk) {
-                writeStream.write(chunk);
-            },
-            close() {
-                writeStream.end();
-            },
-            abort() {
-                writeStream.destroy();
-            }
-        });
-        response.body?.pipeTo(writableStream);
-    });
 });
 
 test("npm run postinstall", () => {
@@ -80,9 +59,6 @@ afterAll(async () => {
         await rm(vrfDecompilerPath, {
             recursive: true
         });
-    }
-    if (existsSync(sampleVtexCPath)) {
-        await rm(sampleVtexCPath);
     }
     if (existsSync(decompiledSamplePngPath)) {
         await rm(decompiledSamplePngPath);
