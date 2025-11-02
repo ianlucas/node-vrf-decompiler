@@ -45,7 +45,7 @@ jobs:
             exit 0
           fi
           rm package-lock.json
-          npm install
+          npm install --ignore-scripts
           echo "has_changes=true" >> $GITHUB_OUTPUT
 
       - name: Configure Git
