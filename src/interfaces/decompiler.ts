@@ -34,7 +34,7 @@ export interface DecompilerArgs {
     vpkExtensions?: string;
 
     /**
-     * File path filter, example: "panorama\" or "scripts/items/items_game.txt".
+     * File path filter(s), supports comma-separated values. Example: "panorama/,sounds/" or "scripts/items/items_game.txt".
      * @remarks Can be specified using `--vpk_filepath` or `-f`.
      */
     vpkFilepath?: string;
@@ -134,9 +134,28 @@ export interface DecompilerArgs {
     toolsAssetInfoShort?: boolean;
 
     /**
+     * Decompile textures with specified decode flags. Options: "none", "auto", "foceldr". Default: "auto".
      * @remarks Can be specified using `--texture_decode_flags`.
      */
     textureDecodeFlags?: string;
+
+    /**
+     * If higher than 1, files will be processed concurrently.
+     * @remarks Can be specified using `--threads`.
+     */
+    threads?: number;
+
+    /**
+     * Show version information.
+     * @remarks Can be specified using `--version`.
+     */
+    version?: boolean;
+
+    /**
+     * Show help information.
+     * @remarks Can be specified using `--help`.
+     */
+    help?: boolean;
 }
 
 export type DecompilerArgsKey = keyof Omit<DecompilerArgs, "debug">;
