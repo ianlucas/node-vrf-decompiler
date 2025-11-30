@@ -19,7 +19,7 @@ const executablePath = join(extractPath, EXECUTABLE_NAME);
 export function vrfDecompiler({ debug, ...args }: DecompilerArgs): ChildProcessWithoutNullStreams {
     const formattedArgs = Object.entries(args).flatMap(([key, value]) => {
         key = toOriginalCase(key as DecompilerArgsKey);
-        return typeof value === "boolean" ? [key] : [key, value];
+        return typeof value === "boolean" ? [key] : [key, value.toString()];
     });
     if (debug) {
         console.log(`${executablePath} ${formattedArgs.join(" ")}`);
