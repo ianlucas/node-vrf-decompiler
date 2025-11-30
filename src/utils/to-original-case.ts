@@ -27,7 +27,10 @@ const map: Record<DecompilerArgsKey, string> = {
     toolsAssetInfoShort: "--tools_asset_info_short",
     gltfAnimationList: "--gltf_animation_list",
     gltfExportAnimations: "--gltf_export_animations",
-    textureDecodeFlags: "--texture_decode_flags"
+    textureDecodeFlags: "--texture_decode_flags",
+    threads: "--threads",
+    version: "--version",
+    help: "--help"
 };
 
 export function toOriginalCase(option: DecompilerArgsKey): string {
