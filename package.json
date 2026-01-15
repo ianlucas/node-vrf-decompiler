@@ -19,7 +19,7 @@
         "@types/follow-redirects": "^1.14.4",
         "@types/node": "^22.19.6",
         "@types/unzipper": "^0.10.11",
-        "prettier": "3.7.4",
+        "prettier": "3.8.0",
         "typedoc": "^0.28.16",
         "typescript": "^5.9.3",
         "vitest": "^4.0.17"
