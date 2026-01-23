@@ -19,10 +19,10 @@
         "@types/follow-redirects": "^1.14.4",
         "@types/node": "^22.19.7",
         "@types/unzipper": "^0.10.11",
-        "prettier": "3.8.0",
+        "prettier": "3.8.1",
         "typedoc": "^0.28.16",
         "typescript": "^5.9.3",
-        "vitest": "^4.0.17"
+        "vitest": "^4.0.18"
     },
     "dependencies": {
         "follow-redirects": "^1.15.11",
