@@ -13,7 +13,7 @@ import { EXECUTABLE_NAME } from "../src/vrf-decompiler.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const BASE_URL = "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/16.0/";
+const BASE_URL = "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/17.0/";
 const platform = getPlatform();
 const zipName = `cli-${platform}.zip`;
 const downloadPath = join(__dirname, "..", zipName);

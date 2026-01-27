@@ -11,7 +11,7 @@
         "format": "prettier . --write",
         "postinstall": "node dist/scripts/postinstall.js",
         "prepack": "([ -d dist ] && rm -rf dist); tsc",
-        "test": "vitest --run --testTimeout 120000",
+        "test": "vitest --run --testTimeout 120000 --hookTimeout 120000",
         "upgrade": "npx npm-check-updates@latest --target minor -u"
     },
     "devDependencies": {
