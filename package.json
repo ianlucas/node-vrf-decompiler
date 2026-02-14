@@ -20,7 +20,7 @@
         "@types/node": "^22.19.11",
         "@types/unzipper": "^0.10.11",
         "prettier": "3.8.1",
-        "typedoc": "^0.28.16",
+        "typedoc": "^0.28.17",
         "typescript": "^5.9.3",
         "vitest": "^4.0.18"
     },
