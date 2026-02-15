@@ -3,9 +3,18 @@
     "description": "A Valve Resource Format's Decompiler wrapper for TypeScript",
     "license": "MIT",
     "author": "Ian Lucas",
-    "repository": "ianlucas/node-vrf-decompiler",
+    "homepage": "https://github.com/ianlucas/node-vrf-decompiler#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ianlucas/node-vrf-decompiler.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ianlucas/node-vrf-decompiler/issues"
+    },
     "type": "module",
-    "main": "dist/src/index.js",
+    "main": "./dist/src/index.js",
+    "types": "./dist/src/index.d.ts",
+    "sideEffects": false,
     "scripts": {
         "docs": "typedoc --out docs src/index.ts",
         "format": "prettier . --write",
@@ -27,5 +36,8 @@
     "dependencies": {
         "follow-redirects": "^1.15.11",
         "unzipper": "^0.12.3"
+    },
+    "engines": {
+        "node": ">=20"
     }
 }
