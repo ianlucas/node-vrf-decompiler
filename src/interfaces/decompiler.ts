@@ -76,12 +76,6 @@ export interface DecompilerArgs {
     vpkDecompile?: boolean;
 
     /**
-     * Decompile supported resource files. Alias of `vpkDecompile`.
-     * @remarks Can be specified using `--decompile`.
-     */
-    decompile?: boolean;
-
-    /**
      * Lists all resources in given VPK. File extension and path filters apply.
      * @remarks Can be specified using `--vpk_list` or `-l`.
      */
@@ -94,17 +88,19 @@ export interface DecompilerArgs {
     vpkDir?: boolean;
 
     /**
+     * Whether to export animations during glTF exports.
      * @remarks Can be specified using `--gltf_export_animations`.
      */
     gltfExportAnimations?: boolean;
 
     /**
+     * Comma-separated list of animations to include in glTF export, example: "idle,dropped". Requires --gltf_export_animations. By default includes all animations.
      * @remarks Can be specified using `--gltf_animation_list`.
      */
     gltfAnimationList?: string;
 
     /**
-     * Exports meshes/models in given glTF format. Must be either 'gltf' (default) or 'glb'.
+     * Exports meshes/models in given glTF format. Must be either 'gltf' or 'glb'.
      * @remarks Can be specified using `--gltf_export_format`.
      */
     gltfExportFormat?: "gltf" | "glb";
@@ -114,6 +110,12 @@ export interface DecompilerArgs {
      * @remarks Can be specified using `--gltf_export_materials`.
      */
     gltfExportMaterials?: boolean;
+
+    /**
+     * Comma-separated list of meshes to include in glTF export. By default includes all meshes in a model.
+     * @remarks Can be specified using `--gltf_mesh_list`.
+     */
+    gltfMeshList?: string;
 
     /**
      * Whether to perform any glTF spec adaptations on textures (e.g. split metallic map).
