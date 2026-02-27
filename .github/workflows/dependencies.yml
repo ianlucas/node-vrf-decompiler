@@ -56,7 +56,7 @@ jobs:
           ")
 
           rm package-lock.json
-          npm install
+          npm install --ignore-scripts
           echo "has_changes=true" >> $GITHUB_OUTPUT
           echo "title=$TITLE" >> $GITHUB_OUTPUT
 
