@@ -29,9 +29,9 @@
         "@types/node": "^22.19.15",
         "@types/unzipper": "^0.10.11",
         "prettier": "3.8.1",
-        "typedoc": "^0.28.17",
+        "typedoc": "^0.28.18",
         "typescript": "^5.9.3",
-        "vitest": "^4.1.0"
+        "vitest": "^4.1.1"
     },
     "dependencies": {
         "follow-redirects": "^1.15.11",
