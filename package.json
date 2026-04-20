@@ -29,7 +29,7 @@
         "@types/node": "^22.19.17",
         "@types/unzipper": "^0.10.11",
         "prettier": "3.8.2",
-        "typedoc": "^0.28.18",
+        "typedoc": "^0.28.19",
         "typescript": "^6.0.2",
         "vitest": "^4.1.4"
     },
