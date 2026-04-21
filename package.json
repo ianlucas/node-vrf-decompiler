@@ -29,12 +29,12 @@
         "@types/node": "^22.19.17",
         "@types/unzipper": "^0.10.11",
         "prettier": "3.8.2",
-        "typedoc": "^0.28.18",
+        "typedoc": "^0.28.19",
         "typescript": "^6.0.2",
         "vitest": "^4.1.4"
     },
     "dependencies": {
-        "follow-redirects": "^1.15.11",
+        "follow-redirects": "^1.16.0",
         "unzipper": "^0.12.3"
     },
     "engines": {
