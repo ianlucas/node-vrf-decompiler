@@ -28,7 +28,7 @@
         "@types/follow-redirects": "^1.14.4",
         "@types/node": "^22.19.17",
         "@types/unzipper": "^0.10.11",
-        "prettier": "3.8.2",
+        "prettier": "3.8.3",
         "typedoc": "^0.28.19",
         "typescript": "^6.0.2",
         "vitest": "^4.1.4"
